@@ -1,4 +1,4 @@
-$main-color : rgba(255,255,100,0.2);
+$main-color : rgba(100,100,100,0.8);
 
 body {
   margin: 0;
@@ -17,10 +17,14 @@ code {
 .carouselItem {
   height: 100vh;
   width: 100vw;
+  align-self: center;
+  background-color: $main-color;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../img/github-logo.png');
 }
-.carouselImage {
-  background-color: $main-color; 
-  max-width: 100%;
-  height: auto;
-  opacity:0.4;
+.carouselLink {
+  height: 400px;
+  width: 400px;
 }

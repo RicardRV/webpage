@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import "bootstrap/dist/css/bootstrap.css";
 
 ReactDOM.render(
-    <MainCarousel />,
+  <MainCarousel />,
   document.getElementById('root')
 );
 

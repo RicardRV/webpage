@@ -1,23 +1,36 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import Carousel from 'react-bootstrap/Carousel';
-import gitHubImg from '../img/github-logo.png';
+import App from '../App';
 import '../scss/index.scss';
 
 class MainCarousel extends React.Component {
+  constructor(props) 
+  {
+    super(props);
+    this.state = {isToggleOn: true};
+
+    // This binding is necessary to make `this` work in the callback    
+    this.handleClick = this.handleClick.bind(this);  
+  }
+
+  handleClick()
+  {
+    ReactDOM.render(<App />, document.getElementById('root'));
+  }
+
+
   render() {
       return (
       <Carousel>
-        <Carousel.Item interval={1000000} className="carouselItem">
-          <img
-            className="d-block img-fluid carouselImage"
-            src={gitHubImg}
-            alt="First slide" fluid
-          />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
+        
+        <Carousel.Item interval={1000000} className="carouselItem" onClick={this.handleClick}>
+            <Carousel.Caption>
+              <h3>First slide label</h3>
+              <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+            </Carousel.Caption> 
         </Carousel.Item>
+        
  {/*       <Carousel.Item interval={5000000}>
           <img
             className="d-block w-100"
