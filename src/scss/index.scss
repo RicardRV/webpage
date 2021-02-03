@@ -17,14 +17,41 @@ code {
 .carouselItem {
   height: 100vh;
   width: 100vw;
-  align-self: center;
+}
+/*.carouselLink {
+  height: 400px;
+  width: 400px;
+  filter: blur(-8px);
+  -webkit-filter: blur(-8px);
+}*/
+.carouselImg{
+  height: 100%;
+  width: 100%;
   background-color: $main-color;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-image: url('../img/github-logo.png');
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
 }
-.carouselLink {
-  height: 400px;
-  width: 400px;
+.carouselText {
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+  color: white;
+  font-weight: bold;
+  border: 3px solid #f1f1f1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 30%;
+  padding: 20px;
+  text-align: center;
+}
+
+.carouselText:hover {
+  width: 33%;
+  padding: 25px;
 }

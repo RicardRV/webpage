@@ -25,10 +25,12 @@ class MainCarousel extends React.Component {
       <Carousel>
         
         <Carousel.Item interval={1000000} className="carouselItem" onClick={this.handleClick}>
-            <Carousel.Caption>
+          <div className="carouselImg"></div>
+          <div className="carouselText">Patata Full hd</div>
+            {/*<Carousel.Caption className="carouselText">
               <h3>First slide label</h3>
               <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-            </Carousel.Caption> 
+            </Carousel.Caption> */}
         </Carousel.Item>
         
  {/*       <Carousel.Item interval={5000000}>
