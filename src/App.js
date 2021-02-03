@@ -1,4 +1,4 @@
-import './App.css';
+import './scss/App.scss';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
           Learn React
         </a>
         {/*!TODO fer un servidor apache per a poder veure el joc */}
-        <iframe src="./gitgatgut/index" width="640" height="640" title="gitgatgut"/>
+        <iframe src="http://192.168.1.100" width="640" height="640" title="gitgatgut"/>
       </header>
     </div>
   );
